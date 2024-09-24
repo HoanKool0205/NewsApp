@@ -5,12 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.androidexp.newsapp.view.fragments.EntertainmentFragment;
-import com.androidexp.newsapp.view.fragments.HealthFragment;
 import com.androidexp.newsapp.view.fragments.HomeFragment;
-import com.androidexp.newsapp.view.fragments.ScienceFragment;
 import com.androidexp.newsapp.view.fragments.SportsFragment;
-import com.androidexp.newsapp.view.fragments.TechnologyFragment;
 
 public class PageAdapter extends FragmentPagerAdapter {
     int tabCount;
@@ -28,19 +24,25 @@ public class PageAdapter extends FragmentPagerAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                SportsFragment sportsFragment = new SportsFragment();
-                sportsFragment.setCategory("sports");
-                return sportsFragment;
+                SportsFragment fragment = new SportsFragment();
+                fragment.setCategory("sports");
+                return fragment;
             case 2:
-                SportsFragment sportsFragment2 = new SportsFragment();
-                sportsFragment2.setCategory("health");
-                return sportsFragment2;
+                SportsFragment fragment1 = new SportsFragment();
+                fragment1.setCategory("health");
+                return fragment1;
             case 3:
-                return new ScienceFragment();
+                SportsFragment fragment2 = new SportsFragment();
+                fragment2.setCategory("science");
+                return fragment2;
             case 4:
-                return new EntertainmentFragment();
+                SportsFragment fragment3 = new SportsFragment();
+                fragment3.setCategory("entertainment");
+                return fragment3;
             case 5:
-                return new TechnologyFragment();
+                SportsFragment fragment4 = new SportsFragment();
+                fragment4.setCategory("entertainment");
+                return fragment4;
 
             default:
                 return null;

@@ -22,7 +22,6 @@ import com.androidexp.newsapp.dummyPresenter.DummyPresenters;
 import com.androidexp.newsapp.interfaces.GetAllNewsView;
 import com.androidexp.newsapp.model.AllNews;
 import com.androidexp.newsapp.model.Article;
-import com.androidexp.newsapp.view.ItemTabActivity;
 
 import java.util.ArrayList;
 

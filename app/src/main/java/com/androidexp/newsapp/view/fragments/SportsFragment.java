@@ -16,11 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.androidexp.newsapp.NewsClick.IONewsClick;
 import com.androidexp.newsapp.R;
 import com.androidexp.newsapp.adapter.NewsAdapter;
+import com.androidexp.newsapp.adapter.NewsDetailActivity;
 import com.androidexp.newsapp.dummyPresenter.DummyPresenters;
 import com.androidexp.newsapp.interfaces.GetAllNewsView;
 import com.androidexp.newsapp.model.AllNews;
 import com.androidexp.newsapp.model.Article;
-import com.androidexp.newsapp.view.ItemTabActivity;
 
 import java.util.ArrayList;
 
@@ -65,7 +65,7 @@ public class SportsFragment extends Fragment implements GetAllNewsView {
         newsAdapter = new NewsAdapter(mListData, new IONewsClick() {
             @Override
             public void onNewsItemClick(Article article) {
-                Intent intent = new Intent(getContext(), ItemTabActivity.class);
+                Intent intent = new Intent(getContext(), NewsDetailActivity.class);
                 intent.putExtra("url", article.getUrl());
                 startActivity(intent);
             }

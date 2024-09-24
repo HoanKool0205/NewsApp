@@ -33,10 +33,12 @@ public class NewsDetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
+
         webView.setWebViewClient(new WebViewClient());
         WebSettings settings = webView.getSettings();
         settings.setUseWideViewPort(false);
         settings.setSupportZoom(false);
+
         webView.loadUrl(url);
 
     }
